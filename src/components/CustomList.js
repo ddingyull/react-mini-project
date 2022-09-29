@@ -1,9 +1,11 @@
-export default function CustomList(props){
+function CustomList(props){
   return(
     <ul>
-      {props.nameArr.map((el)=>{
+      {props.userContent.map((el)=>{
         return <li>{ el }</li>
       })}
     </ul>
   )
 }
+
+export default CustomList;

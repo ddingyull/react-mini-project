@@ -1,15 +1,23 @@
+import { Container } from 'react-bootstrap'
+
 export default function CustomObj(props){
-  const { name, age, nickName } = props.obj;
+  // const { name, age, nickName } = props.customObj[0];
 
   return(
-    <ul>
-    {props.arr.map((el)=>{
-      return <div>
-      <h4>이름: {name}</h4>
-      <h4>나이: {age}</h4>
-      <h4>별명: {nickName}</h4>
+    <div>
+      {
+      props.customObj.map((el)=>{
+        return(
+          <Container className='card'>
+            <h6>이름 : {el.name}</h6>
+            <h6>나이 : {el.age}</h6>
+            <h6>별명 : {el.nickName}</h6>
+          </Container>
+        )
+      })
+      }
+
+
     </div>
-    })}
-  </ul>
   )
 }

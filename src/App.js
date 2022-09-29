@@ -35,16 +35,18 @@
 //     <div className='App'>
 //       <MainHeader/>
 //       <ImgComponent />
-//       <ProfileCard text="Go to Naver" name="뽀로로" age="20" href="http://naver.com"/>
-//       <CustomList nameArr={ nameArr }/>
-//       {/* <CustomObj arr ={ }/> */}
-//       <ChangeObj objArr={ customObj }/>
+//       {/* <ProfileCard text="Go to Naver" name="뽀로로" age="20" href="http://naver.com"/> */}
+//       {/* <ProfileCard userContent={ userContent }/> */}
+//       {/* <CustomList nameArr={ nameArr }/> */}
+//       {/* <ChangeObj objArr={ customObj }/> */}
 //       <ClassState/>
 //       <FunctionalState/>
 //       <Counter/>
+//       <CustomObj customObj={ customObj }/>
 //       <TestCss style="red"/>
 //       <TestStyled/>
 //       {/* <BtnToNaver/> */}
+
 //     </div>
 //   );
 // }
@@ -69,7 +71,6 @@
 //   justify-content: center;
 //   font-size: calc(10px + 2vmin);
 //   color: white;
-
 // `
 
 // const rotation = `
@@ -92,7 +93,6 @@
 //   justify-content: center;
 //   font-size: calc(10px + 2vmin);
 //   color: white;
-
 // `
 
 // const rotation = `
@@ -116,21 +116,21 @@
 // function App() {
 //   return (
 //     <RootDiv>
-//       <AppHeader>
-//       <AppLogo src={ logo } alt="app" />
-//         <p>Edit <code>src/App.js</code> and save to reload.</p>
-//       <MyA
-//     href="https://reactjs.org"
-//     target="_blank"
-//     rel="noopener noreferrer"
-//     >
-//     Learn React
-//       </MyA>
-//       </AppHeader>
-//       </RootDiv>
-    
+//     <AppHeader>
+//     <AppLogo src={ logo } alt="app" />
+//       <p>Edit <code>src/App.js</code> and save to reload.</p>
+//     <MyA
+//   href="https://reactjs.org"
+//   target="_blank"
+//   rel="noopener noreferrer"
+//   >
+//   Learn React
+//     </MyA>
+//     </AppHeader>
+//     </RootDiv>
 // );
 // }
+
 import ConditionalRender from './components/ConditionalRender';
 import PracticeOne from './components/PracticeOne';
 import PracticeTwo from './components/PracticeTwo';

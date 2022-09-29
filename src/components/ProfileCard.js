@@ -18,7 +18,7 @@ import Card from 'react-bootstrap/Card';
 
 // 함수형 컴포넌트
 function ProfileCard(props){
-  const { text, name, age, href } = props;
+  const { name, age, nickName } = props.obj;
   return (
     // <div className='m-3 float-end'>
     //   <h6>{name} 님 반갑습니다</h6>
@@ -27,12 +27,14 @@ function ProfileCard(props){
     // </div>
     <Card style={{ width: '18rem' }} className="m-3">
     <Card.Body>
-      <Card.Title>{name} 님 반갑습니다</Card.Title>
+      <Card.Title>
+      <p>{name}님 반갑습니다</p>
+        </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">반갑습니다</Card.Subtitle>
       <Card.Text>
-        React 연습장에 오신걸 환영합니다.
+        {props.name}React 연습장에 오신걸 환영합니다.
       </Card.Text>
-      <Card.Link href={href}>{text}</Card.Link>
+      <Card.Link>{name}</Card.Link>
     </Card.Body>
   </Card>
   )
