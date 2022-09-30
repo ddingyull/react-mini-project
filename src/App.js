@@ -131,13 +131,14 @@
 // );
 // }
 
-import ConditionalRender from './components/ConditionalRender';
-import PracticeOne from './components/PracticeOne';
-import PracticeTwo from './components/PracticeTwo';
-import TestRef from './components/TestRef';
-import ChangeFocus from './components/ChangeFocus';
 
-import { useState } from 'react';
+// import ConditionalRender from './components/ConditionalRender';
+// import PracticeOne from './components/PracticeOne';
+// import PracticeTwo from './components/PracticeTwo';
+// import TestRef from './components/TestRef';
+// import ChangeFocus from './components/ChangeFocus';
+
+// import { useState } from 'react';
 
 // function App() {
 //   const [condition, setCondition] = useState("보이기");
@@ -156,24 +157,89 @@ import { useState } from 'react';
 // );
 // }
 
+// function App(){
+//   const [practice, setPractice ] = useState('1번');
+//   const onChange = () => {
+//     practice == "1번" ? setPractice('2번') : setPractice('1번');
+//   }
+
+//   const practiceOne = practice === "1번" && <PracticeOne /> ;
+
+//   return (
+//   <div className="App">
+//     {/* 앞부분이 true이면 뒤에가 실행됨 */}
+//     { practice === "1번" ? <PracticeOne text={practice} />  :<PracticeTwo text={practice} />} 
+//   <button onClick={onChange}>{practice}</button>
+//   <TestRef/>
+//   <ChangeFocus/>
+//   </div>
+// );
+// }
+
+// export default App;
+
+import { useEffect, useState, useRef } from 'react';
+// import ReactFragment from './components/ReactFragment';
+import TableColumn from './components/TableColumn';
+import Comparing from './components/Comparing';
+import TestUseEffect from './components/TestUseEffect';
+import Timer from './components/Timer';
+import PracticeTimer from './components/PracticeTimer';
+import TestUseMemo from './components/TestUseMemo';
+import UsingUseMemo from './components/UsingUseMemo';
+import './App.css'
+
 function App(){
-  const [practice, setPractice ] = useState('1번');
-  const onChange = () => {
-    practice == "1번" ? setPractice('2번') : setPractice('1번');
-  }
+  const [show, setShow] = useState(false);
+  const changeFocus = useRef();
 
-  const practiceOne = practice === "1번" && <PracticeOne /> ;
-
+  // useEffect(() => {
+  //   changeFocus.current.focus();
+  // },[] )
+  
   return (
-  <div className="App">
-    {/* 앞부분이 true이면 뒤에가 실행됨 */}
-    { practice === "1번" ? <PracticeOne text={practice} />  :<PracticeTwo text={practice} />} 
-  <button onClick={onChange}>{practice}</button>
-  <TestRef/>
-  <ChangeFocus/>
-  </div>
+    <>
+    <TestUseMemo/>
+    <UsingUseMemo/>
+    </>
+    // <>
+    // {
+    // show == true ? <PracticeTimer /> : null
+    // }
+    // <button onClick={()=>{ setShow(!show) }}>보이기</button>
+    // </>
+
+    // <div>
+    //   { show && <PracticeTimer/> }
+    //   <button ref={changeFocus} onClick={()=>{ setShow(!show) }}>{show? '숨기기':'보이기'}</button>
+    // </div>
+
+    // <div>
+    //   { show && <Timer/> }
+    //   <button onClick={()=>{ setShow(!show) }}>보이기</button>
+    // </div>
+
+    // <ReactFragment/>
+    // <div className="App">
+    //   <table border="1">
+    //     <tbody>
+    //       <tr border="1">
+    //         <td>1</td>
+    //         <td>2</td>
+    //         <td>3</td>
+    //       </tr>
+    //       <tr>
+    //     <TableColumn />
+    //       </tr>
+    //     </tbody>
+    //   </table>
+    // </div>
+    // <Comparing/>
+    // <TestUseEffect/>
 );
 }
 
 export default App;
+
+
 

@@ -1,7 +1,18 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
+.App h1{
+  background-color: #555;
+}
+
+.App span{
+  background-color: rgb(237, 92, 92);
+}
+
+
+/* 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +46,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
