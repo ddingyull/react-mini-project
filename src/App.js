@@ -187,6 +187,13 @@ import Timer from './components/Timer';
 import PracticeTimer from './components/PracticeTimer';
 import TestUseMemo from './components/TestUseMemo';
 import UsingUseMemo from './components/UsingUseMemo';
+import Where from './components/Where';
+import Images from './components/Images';
+import Dialog from './components/Dialog';
+import WelcomeDialog from './components/WelcomeDialog';
+import WelcomeDialogBtn from './components/WelcomeDialogBtn';
+import FancyBorder from './components/FancyBorder';
+import SignUpDialog from './components/SignUpDialog';
 import './App.css'
 
 function App(){
@@ -199,8 +206,25 @@ function App(){
   
   return (
     <>
+    
+    <FancyBorder color="blue">
+      {/* <h1>Hello, props.children</h1>
+      <p>이건 매우 유용한 기술입니다요!</p> */}
+      <WelcomeDialogBtn/>
+      <SignUpDialog/>
+    </FancyBorder>
+
+    <WelcomeDialogBtn/>
+    <WelcomeDialog/>
+    <Dialog
+      color="orange"
+      title="Welcome to summoner's lift"
+      message="소환사의 협곡에 오신 걸 환영합니다."
+    />
+    <Images/>
     <TestUseMemo/>
     <UsingUseMemo/>
+    {/* <Where/> */}
     </>
     // <>
     // {
